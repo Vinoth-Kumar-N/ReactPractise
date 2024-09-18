@@ -1,27 +1,30 @@
-import Arrobj from "./components/Arrobj";
-
-const arr = [
-    {
-        name:"vinoth",
-        age:20,
-        isAlive: true
-    },
-    {
-        name:"jaga",
-        age:19,
-        isAlive: false
-    },
-    {
-        name:"abi",
-        age:20,
-        isAlive: true
-    }
-];
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import WebLayout from './Layout/WebLayout';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
 const App = () => {
     return (
         <>
-            <div className="h-screen w-screen flex justify-center items-center bg-slate-500">
+            <BrowserRouter>
+                <Routes>
+                    <Route element={<WebLayout />} >
+                        <Route path='/' element={<Home />} ></Route>
+                        <Route path='/Projects' element={<Projects />} ></Route>
+                        <Route path='/Contact' element={<Contact />} ></Route>
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </>
+    )
+}
+
+export default App;
+
+
+
+{/* <div className="h-screen w-screen flex justify-center items-center bg-slate-500">
                 <div className="h-3/8 w-[30%] bg-white p-5 rounded-lg dark:shadow-2xl">
                     <h2 className="text-center font-bold text-3xl">Register</h2>
                     <form action="post" className="p-5 flex flex-col gap-4">
@@ -34,9 +37,4 @@ const App = () => {
             </div>
             <div className="mt-10">
                 <Arrobj data = {arr}/>
-            </div>
-        </>
-    )
-}
-
-export default App;
+            </div> */}
