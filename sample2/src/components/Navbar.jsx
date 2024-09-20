@@ -17,6 +17,9 @@ const Navbar = () => {
                                     <a href="/" className="text-xl text-black font-semibold ">Home</a>
                                 </li>
                                 <li className="mr-8 hover:bg-[#ebe6e6] px-2 rounded-md">
+                                    <a href="/About" className="text-xl text-black font-semibold ">About</a>
+                                </li>
+                                <li className="mr-8 hover:bg-[#ebe6e6] px-2 rounded-md">
                                     <a href="/Projects" className="text-xl text-black font-semibold">Projects</a>
                                 </li>
                                 <li className="mr-8 hover:bg-[#ebe6e6] px-2 rounded-md">
