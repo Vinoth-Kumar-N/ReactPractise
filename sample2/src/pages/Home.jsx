@@ -5,11 +5,10 @@ import proImg from '../assets/img/profile.jpg';
 const Home = () => {
     return (
         <>
-            <Navbar />
-            <div className="h-full w-full flex items-center justify-center mt-[2rem]">
-                <div className="w-1/2 h-full ml-[8rem]">
-                    <h1 className="text-5xl font-extrabold">Hi! I am Vinoth Kumar N</h1>
-                    <p className="text-2xl mt-[1rem]">I am a Full Stack Developer</p>
+            <div className="h-full w-full flex items-center justify-center mt-[2rem] gap-10 bg-[#fff]">
+                <div className="w-1/2 h-full ml-[8rem] flex flex-col items-center justify-center">
+                    <h1 className="text-4xl font-bold">Hi There!</h1>
+                    <p className="text-[2.5em] mt-[1rem] font-extrabold">I'M <span className="text-[1em] font-extrabold text-purple-700 tracking-wide"> VINOTH KUMAR</span></p>
                     <div className="flex flex-row">
                         <a className="pt-7" target="_blank" href="https://www.instagram.com/mastr_vk/">
                             <svg  xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="currentColor" className="bi bi-instagram" viewBox="0 0 16 16">
@@ -43,7 +42,7 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div className="w-1/2 h-full">
+                <div className="w-1/2 h-[28rem] flex shrink-0">
                     <img className='w-[30rem] h-[30rem]' src={proImg} alt="profileImg" />
                 </div>
             </div>

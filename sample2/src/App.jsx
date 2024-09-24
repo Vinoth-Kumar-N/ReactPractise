@@ -1,36 +1,31 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+
 import Home from './pages/Home';
-import Projects from './pages/Projects';
 import About from './pages/About';
+import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Weblayout from './layouts/Weblayout';
 
-
-
-const router = createBrowserRouter([
-  {
-    path:'/',
-    element: <Home />
-  },
-  {
-    path:'/Projects',
-    element: <Projects />
-  },
-  {
-    path:'/Contact',
-    element: <Contact />
-  },
-  {
-    path:'/About',
-    element: <About />
-  }
-]);
 
 function App() {
-  
+
   return (
     <>
-      <RouterProvider router = {router}>
-      </RouterProvider>
+
+      <BrowserRouter>
+        <Routes>
+          
+          <Route element={<Weblayout />}>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/projects' element={<Projects />} />
+            <Route path='/contact' element={<Contact />} />
+          </Route>
+          
+        </Routes>
+      </BrowserRouter>
+
     </>
   )
 }
